@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexPulse - Next-Gen Cloud & AI Operating System</title>
+  <meta name="description" content="Streamline workflows, automate deployments, and harness deep enterprise analytics with ApexPulse.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Toast Notification -->
+  <div id="toast" class="toast hidden" role="alert" aria-live="assertive">
+    <div class="toast-icon"><i class="fa-solid fa-circle-check"></i></div>
+    <div class="toast-message">Message sent successfully!</div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-bolt-lightning"></i></span>
+        <span class="logo-text">Apex<span class="gradient-text">Pulse</span></span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#hero" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-mobile-cta">
+          <a href="#pricing" class="btn btn-primary btn-sm">Get Started</a>
+        </div>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-outline btn-sm desktop-only">Sign In</a>
+        <a href="#pricing" class="btn btn-primary btn-sm desktop-only">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-glow"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span class="badge-text">ApexPulse 3.0 Released</span>
+            <span class="badge-tag">New AI Engine <i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+
+          <h1 class="hero-title">
+            Scale Your Vision with <br>
+            <span class="gradient-text">Autonomous Cloud</span> Intelligence
+          </h1>
+
+          <p class="hero-description">
+            Streamline enterprise workflows, automate multi-region microservices, and unlock predictive insights with an all-in-one developer-first platform.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#pricing" class="btn btn-primary btn-lg">
+              Start 14-Day Free Trial <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <button class="btn btn-glass btn-lg" id="demo-btn">
+              <i class="fa-solid fa-play"></i> Watch Interactive Demo
+            </button>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <h3 class="metric-value"><span class="counter" data-target="99.99">0</span>%</h3>
+              <p class="metric-label">Uptime SLA</p>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <h3 class="metric-value"><span class="counter" data-target="350">0</span>k+</h3>
+              <p class="metric-label">Global Deployments</p>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <h3 class="metric-value"><span class="counter" data-target="10">0</span>x</h3>
+              <p class="metric-label">Pipeline Velocity</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="dashboard-preview-card">
+            <div class="card-glow-effect"></div>
+            <div class="dashboard-header">
+              <div class="traffic-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <span class="dashboard-title"><i class="fa-solid fa-network-wired"></i> cluster-node-alpha01 // live</span>
+              <span class="badge-live"><span class="live-pulse"></span> ONLINE</span>
+            </div>
+
+            <div class="dashboard-body">
+              <div class="preview-metric-row">
+                <div class="preview-stat-card">
+                  <span class="stat-icon"><i class="fa-solid fa-server"></i></span>
+                  <div>
+                    <span class="stat-num">98.4%</span>
+                    <span class="stat-title">Cluster Health</span>
+                  </div>
+                </div>
+                <div class="preview-stat-card">
+                  <span class="stat-icon text-cyan"><i class="fa-solid fa-bolt"></i></span>
+                  <div>
+                    <span class="stat-num">14.2ms</span>
+                    <span class="stat-title">Global Latency</span>
+                  </div>
+                </div>
+                <div class="preview-stat-card">
+                  <span class="stat-icon text-emerald"><i class="fa-solid fa-shield-halved"></i></span>
+                  <div>
+                    <span class="stat-num">0 Threats</span>
+                    <span class="stat-title">Realtime Defense</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="preview-chart-box">
+                <div class="chart-header">
+                  <span>Throughput Traffic (Req/sec)</span>
+                  <span class="chart-value-tag">+34.8% vs last hour</span>
+                </div>
+                <div class="chart-bars">
+                  <div class="bar" style="--height: 45%;"></div>
+                  <div class="bar" style="--height: 60%;"></div>
+                  <div class="bar" style="--height: 52%;"></div>
+                  <div class="bar" style="--height: 75%;"></div>
+                  <div class="bar" style="--height: 65%;"></div>
+                  <div class="bar" style="--height: 88%;"></div>
+                  <div class="bar active" style="--height: 96%;"></div>
+                  <div class="bar" style="--height: 70%;"></div>
+                  <div class="bar" style="--height: 85%;"></div>
+                  <div class="bar" style="--height: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="preview-terminal">
+                <div class="terminal-line"><span class="term-prompt">$</span> apex deploy --env=production --canary=10%</div>
+                <div class="terminal-line text-emerald"><i class="fa-solid fa-check"></i> Build succeeded in 1.48s [Hash: 9f72b]</div>
+                <div class="terminal-line text-cyan"><i class="fa-solid fa-arrows-rotate fa-spin"></i> Synchronizing 24 Edge Gateways...</div>
+              </div>
+            </div>
+
+            <!-- Floating Badge 1 -->
+            <div class="floating-badge badge-top-right">
+              <i class="fa-solid fa-shield-virus"></i>
+              <div>
+                <strong>Zero-Trust Engine</strong>
+                <small>Auto-Quarantine Active</small>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2 -->
+            <div class="floating-badge badge-bottom-left">
+              <i class="fa-solid fa-microchip"></i>
+              <div>
+                <strong>AI Auto-Scaler</strong>
+                <small>Dynamic Resource Balance</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Marquee / Social Proof -->
+    <section class="partners-section">
+      <div class="container">
+        <p class="partners-label">TRUSTED BY ENGINEERING TEAMS AT WORLD-CLASS ENTERPRISES</p>
+        <div class="marquee">
+          <div class="marquee-track">
+            <span class="partner-item"><i class="fa-brands fa-aws"></i> AWS Cloud</span>
+            <span class="partner-item"><i class="fa-brands fa-docker"></i> Docker Inc</span>
+            <span class="partner-item"><i class="fa-brands fa-github"></i> GitHub Core</span>
+            <span class="partner-item"><i class="fa-brands fa-google"></i> Google Cloud</span>
+            <span class="partner-item"><i class="fa-brands fa-cloudflare"></i> Cloudflare</span>
+            <span class="partner-item"><i class="fa-brands fa-react"></i> React Native</span>
+            <span class="partner-item"><i class="fa-brands fa-linux"></i> Linux Enterprise</span>
+            <!-- Duplicated for infinite scroll -->
+            <span class="partner-item"><i class="fa-brands fa-aws"></i> AWS Cloud</span>
+            <span class="partner-item"><i class="fa-brands fa-docker"></i> Docker Inc</span>
+            <span class="partner-item"><i class="fa-brands fa-github"></i> GitHub Core</span>
+            <span class="partner-item"><i class="fa-brands fa-google"></i> Google Cloud</span>
+            <span class="partner-item"><i class="fa-brands fa-cloudflare"></i> Cloudflare</span>
+            <span class="partner-item"><i class="fa-brands fa-react"></i> React Native</span>
+            <span class="partner-item"><i class="fa-brands fa-linux"></i> Linux Enterprise</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">WHO WE ARE</span>
+          <h2 class="section-title">Built for Engineers Who Demand <span class="gradient-text">Absolute Speed</span></h2>
+          <p class="section-subtitle">ApexPulse was engineered from the ground up to solve fragmented cloud architectures, bringing real-time observability and self-healing pipelines to one interface.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card highlight-card">
+            <div class="about-icon-wrap">
+              <i class="fa-solid fa-compass-drafting"></i>
+            </div>
+            <h3>Our Mission</h3>
+            <p>Empower teams of any size to ship reliable software 10x faster without the overhead of maintaining complex custom infrastructure pipelines.</p>
+            <ul class="about-check-list">
+              <li><i class="fa-solid fa-check"></i> Unified multi-cloud abstraction</li>
+              <li><i class="fa-solid fa-check"></i> 99.999% high-availability guarantees</li>
+              <li><i class="fa-solid fa-check"></i> End-to-end cryptographic provenance</li>
+            </ul>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon-wrap">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3>Intelligent Telemetry</h3>
+            <p>Correlate billions of application traces, metrics, and error logs in milliseconds using AI-driven anomaly detection engines.</p>
+            <div class="metric-pill-group">
+              <span class="pill"><i class="fa-solid fa-bolt"></i> 14ms Query Speed</span>
+              <span class="pill"><i class="fa-solid fa-hard-drive"></i> Petabyte-scale</span>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <div class="about-icon-wrap">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <h3>Zero-Trust Security</h3>
+            <p>Automate compliance auditing for SOC2, HIPAA, and ISO 27001 with continuous real-time vulnerability scans and automated key rotations.</p>
+            <div class="metric-pill-group">
+              <span class="pill"><i class="fa-solid fa-shield"></i> SOC-2 Type II</span>
+              <span class="pill"><i class="fa-solid fa-key"></i> Automated mTLS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">POWERFUL FEATURES</span>
+          <h2 class="section-title">End-to-End Enterprise <span class="gradient-text">Cloud Solutions</span></h2>
+          <p class="section-subtitle">Everything your team needs to build, deploy, observe, and protect mission-critical workloads.</p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+            <h3 class="service-title">Autonomous Deployments</h3>
+            <p class="service-desc">Continuous deployment with intelligent canary rollout, automated rollbacks upon error thresholds, and zero downtime.</p>
+            <a href="#contact" class="service-link">Explore Pipeline <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon text-cyan"><i class="fa-solid fa-brain"></i></div>
+            <h3 class="service-title">Predictive AI Insights</h3>
+            <p class="service-desc">Machine learning models proactively predict infrastructure spikes and automatically provision capacity before bottlenecks hit.</p>
+            <a href="#contact" class="service-link">Explore AI Core <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon text-emerald"><i class="fa-solid fa-shield-virus"></i></div>
+            <h3 class="service-title">Cloud Armor & WAF</h3>
+            <p class="service-desc">Next-generation Web Application Firewall with real-time DDoS mitigation, API rate limiting, and bot protection.</p>
+            <a href="#contact" class="service-link">Explore Security <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+            <h3 class="service-title">Global Edge CDN</h3>
+            <p class="service-desc">Distribute static and dynamic assets across 300+ PoPs worldwide with under 20ms response time on 6 continents.</p>
+            <a href="#contact" class="service-link">Explore Edge <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="service-card">
+            <div class="service-icon text-cyan"><i class="fa-solid fa-cubes-stacked"></i></div>
+            <h3 class="service-title">Microservice Orchestration</h3>
+            <p class="service-desc">Effortlessly manage Kubernetes clusters, serverless containers, and distributed state without writing boilerplate manifests.</p>
+            <a href="#contact" class="service-link">Explore Clusters <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="service-card">
+            <div class="service-icon text-emerald"><i class="fa-solid fa-headset"></i></div>
+            <h3 class="service-title">24/7 Dedicated SRE Support</h3>
+            <p class="service-desc">Direct Slack and phone access to senior Site Reliability Engineers with sub-15 minute SLA for critical incidents.</p>
+            <a href="#contact" class="service-link">Explore Support <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">TRANSPARENT PRICING</span>
+          <h2 class="section-title">Predictable Plans for <span class="gradient-text">Teams of Every Scale</span></h2>
+          <p class="section-subtitle">No surprise overage fees. Upgrade, downgrade, or cancel anytime.</p>
+          
+          <div class="billing-switcher">
+            <span class="billing-label" id="monthly-label">Monthly</span>
+            <label class="switch">
+              <input type="checkbox" id="pricing-toggle" aria-label="Toggle Monthly and Annual Billing">
+              <span class="slider round"></span>
+            </label>
+            <span class="billing-label" id="annual-label">Annually <span class="discount-badge">Save 20%</span></span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Starter Tier -->
+          <div class="pricing-card">
+            <div class="tier-header">
+              <h3 class="tier-name">Developer</h3>
+              <p class="tier-desc">Perfect for indie hackers and growing projects.</p>
+              <div class="tier-price">
+                <span class="currency">$</span>
+                <span class="price-value" data-monthly="19" data-annual="15">19</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <ul class="tier-features">
+              <li><i class="fa-solid fa-check"></i> Up to 5 Active Clusters</li>
+              <li><i class="fa-solid fa-check"></i> 100 GB Edge Bandwidth</li>
+              <li><i class="fa-solid fa-check"></i> Basic Telemetry & Alerts</li>
+              <li><i class="fa-solid fa-check"></i> Community & Forum Support</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Dedicated SRE On-call</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Custom SLA Agreement</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block">Choose Developer</a>
+          </div>
+
+          <!-- Pro Tier (Popular) -->
+          <div class="pricing-card popular">
+            <div class="popular-ribbon">MOST POPULAR</div>
+            <div class="tier-header">
+              <h3 class="tier-name">Growth Team</h3>
+              <p class="tier-desc">For fast-scaling engineering departments.</p>
+              <div class="tier-price">
+                <span class="currency">$</span>
+                <span class="price-value" data-monthly="49" data-annual="39">49</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <ul class="tier-features">
+              <li><i class="fa-solid fa-check"></i> Unlimited Active Clusters</li>
+              <li><i class="fa-solid fa-check"></i> 2 TB Global Edge Bandwidth</li>
+              <li><i class="fa-solid fa-check"></i> AI Anomaly Detection Engine</li>
+              <li><i class="fa-solid fa-check"></i> Automated Rollbacks & Canary</li>
+              <li><i class="fa-solid fa-check"></i> 2-Hour Response Time SLA</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Custom On-Prem Deployment</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block">Start 14-Day Free Trial</a>
+          </div>
+
+          <!-- Enterprise Tier -->
+          <div class="pricing-card">
+            <div class="tier-header">
+              <h3 class="tier-name">Enterprise</h3>
+              <p class="tier-desc">For large mission-critical global deployments.</p>
+              <div class="tier-price">
+                <span class="currency">$</span>
+                <span class="price-value" data-monthly="149" data-annual="119">149</span>
+                <span class="period">/month</span>
+              </div>
+            </div>
+            <ul class="tier-features">
+              <li><i class="fa-solid fa-check"></i> Dedicated Cloud Infrastructure</li>
+              <li><i class="fa-solid fa-check"></i> Unlimited Edge Traffic</li>
+              <li><i class="fa-solid fa-check"></i> 24/7/365 Dedicated SRE Hotline</li>
+              <li><i class="fa-solid fa-check"></i> SOC-2 & HIPAA Compliance Suite</li>
+              <li><i class="fa-solid fa-check"></i> Custom VPC Peering & On-Prem</li>
+              <li><i class="fa-solid fa-check"></i> 99.999% Contractual SLA</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-block">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">TESTIMONIALS</span>
+          <h2 class="section-title">Loved by Thousands of <span class="gradient-text">Developers</span></h2>
+          <p class="section-subtitle">Discover how engineering teams deliver software faster and sleep soundly through the night.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote">"ApexPulse completely eliminated our deployment bottlenecks. We cut our pipeline times from 45 minutes down to 3 minutes, and zero-downtime releases are now standard."</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">SK</div>
+              <div>
+                <h4 class="reviewer-name">Siddharth Kulkarni</h4>
+                <p class="reviewer-role">VP of Engineering, CloudCore Inc</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote">"The automated canary deployments and instant telemetry caught a critical memory leak before it ever touched customers. It has paid for itself tenfold."</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">AR</div>
+              <div>
+                <h4 class="reviewer-name">Ananya Rao</h4>
+                <p class="reviewer-role">Principal SRE, FinSecure Global</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote">"The UI is gorgeous, the API docs are comprehensive, and their customer support team resolved our edge routing configuration in minutes. Highly recommended!"</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">DM</div>
+              <div>
+                <h4 class="reviewer-name">David Miller</h4>
+                <p class="reviewer-role">CTO, Nexus Dynamics</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">GOT QUESTIONS?</span>
+          <h2 class="section-title">Frequently Asked <span class="gradient-text">Questions</span></h2>
+          <p class="section-subtitle">Find quick answers to common questions about setting up and scaling with ApexPulse.</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How difficult is it to migrate from our current cloud provider?</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Migration typically takes less than an afternoon. ApexPulse features one-click connectors for AWS, Google Cloud, Azure, and standard Kubernetes clusters with zero downtime configuration.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Do you offer a free trial without requiring a credit card?</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Our 14-day full-featured trial does not require any credit card. You can test in your sandbox environment and upgrade whenever you are ready.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does the AI predictive scaling work?</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Our neural model evaluates rolling traffic patterns, historical load spikes, and upstream latency indicators to automatically warm up serverless pods 30 seconds before demand spikes.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is our data encrypted at rest and in transit?</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              <p>All data is secured with AES-256 encryption at rest and TLS 1.3 in transit with mutual TLS authentication enabled across internal microservices by default.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What kind of technical support do we receive?</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Developer plans receive 24/7 ticket and forum support. Growth and Enterprise plans receive private Slack/Discord channel access with dedicated SRE specialists.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Ready to Transform Your <span class="gradient-text">Infrastructure?</span></h2>
+          <p class="section-subtitle">Reach out to our engineering team or request a personalized system architecture review.</p>
+        </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            <p>Our solutions architects are available around the clock to assist you.</p>
+
+            <div class="contact-details">
+              <div class="contact-detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <h4>Email</h4>
+                  <p>support@apexpulse.io</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <h4>Phone</h4>
+                  <p>+1 (800) 555-APEX / +91 98765 43210</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <h4>Headquarters</h4>
+                  <p>Tech Innovation Hub, Silicon Avenue & Bangalore Cyber Park</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                <span class="error-msg" id="name-error">Please enter your full name</span>
+              </div>
+              <div class="form-group">
+                <label for="email">Work Email *</label>
+                <input type="email" id="email" name="email" placeholder="john@company.com" required>
+                <span class="error-msg" id="email-error">Please enter a valid work email</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" placeholder="Cloud Migration Inquiry" required>
+              <span class="error-msg" id="subject-error">Please enter a subject</span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your team size, tech stack, and goals..." required></textarea>
+              <span class="error-msg" id="message-error">Please enter your message (at least 10 characters)</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" id="submit-btn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-spinner hidden"><i class="fa-solid fa-circle-notch fa-spin"></i> Sending...</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Demo Video Modal -->
+  <div class="modal-overlay hidden" id="demo-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close" aria-label="Close Modal">&times;</button>
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-bolt-lightning gradient-text"></i> ApexPulse Live Product Tour</h3>
+        <p>A quick 2-minute walkthrough of our intelligent cloud orchestrator.</p>
+      </div>
+      <div class="modal-video-wrapper">
+        <div class="mock-video-player">
+          <div class="video-preview-visual">
+            <i class="fa-solid fa-play-circle play-pulse"></i>
+            <p>Interactive Cloud Console Simulator</p>
+            <small>Latency: 12ms | Nodes: 48 Active | Cluster: Healthy</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="logo">
+            <span class="logo-icon"><i class="fa-solid fa-bolt-lightning"></i></span>
+            <span class="logo-text">Apex<span class="gradient-text">Pulse</span></span>
+          </a>
+          <p class="footer-bio">Empowering developers and global enterprises to deploy scalable, resilient, and intelligent cloud systems effortlessly.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Product</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Autonomous CI/CD</a></li>
+            <li><a href="#services">AI Insights</a></li>
+            <li><a href="#services">Cloud Armor WAF</a></li>
+            <li><a href="#services">Global Edge CDN</a></li>
+            <li><a href="#pricing">Pricing Plans</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="#about">Architecture Guide</a></li>
+            <li><a href="#faq">Knowledge Base</a></li>
+            <li><a href="#services">API Documentation</a></li>
+            <li><a href="#testimonials">Case Studies</a></li>
+            <li><a href="#hero">System Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Stay Connected</h4>
+          <p class="newsletter-desc">Subscribe to our newsletter for cloud insights and weekly architectural teardowns.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Your email address" id="newsletter-email" required>
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2026 ApexPulse Inc. All rights reserved. | Oasis Infobyte Web Development Internship - Task 1.
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
